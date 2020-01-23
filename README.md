@@ -1,14 +1,7 @@
 # Rutgers CS211 Computer Architecture 
 
 # pa1:
-Introduction
-
-  This assignment is designed to give you some initial experience with programming in C, as well as
-compiling, linking, running, and debugging. Your task is to write 6 C programs. Each of them will
-test a portion of your knowledge about C programming. They are discussed below. Your program
-must follow the input-output guidelines listed in each section exactly with no additional or missing
-output.
-
+This assignment was meant to introduce us to coding in C by doing a variety of assignments.
 # First: Array and Sorting
 - You have to write a program that will read an array from a file and sort the given array. You will
 return the array sorted with all odd numbers in ascending order at the front followed by all even
@@ -30,15 +23,9 @@ $./first file1.txt
 
 We will not give you improperly formatted files. You can assume all your input files will be in
 proper format as above.
-Hint: It may be helpful to move all odd numbers to the front of an array first and then sort them.
-
 
 # Second: Hash table
-  In this part, you will implement a hash table containing integers. The hash table has 10,000 buckets.
-An important part of a hash table is collision resolution. In this assignment, we want you to use
-chaining with a linked list to handle a collision. This means that if there is a collision at a particular
-bucket then you will maintain a linked list of all values stored at that bucket. For more information
-about chaining, see http://research.cs.vt.edu/AVresearch/hashing/openhash.php.
+  This assignment had us make hash tables that had 10000 buckets to start, no rehash implementation was required so in theory, elements could continuously map to the same entry in the hashtable:
 
 - A hash table can be implemented in many ways in C. You must find a simple way to implement
 a hash table structure where you have easy access to the buckets through the hash function. As
@@ -117,75 +104,5 @@ $./third file1.txt
 6
 
 # bomb lab:
-1 Introduction
+a project meant to expose us to using GDB debugging, and looking at assembly to understand the function of a program in order to become familiar with translating assembly into C and vice versa.
 
-The nefarious Dr. Evil has planted a slew of “binary bombs” on our class machines. A binary bomb is a
-program that consists of a sequence of phases. Each phase expects you to type a particular string on stdin.
-If you type the correct string, then the phase is defused and the bomb proceeds to the next phase. Otherwise,
-the bomb explodes by printing "BOOM!!!" and then terminating. The bomb is defused when every phase
-has been defused.
-
-There are too many bombs for us to deal with, so we are giving each student a bomb to defuse. Your
-mission, which you have no choice but to accept, is to defuse your bomb before the due date. Good luck,
-and welcome to the bomb squad!
-
-- Step 1: Get Your Bomb
-You must obtain your bomb from inside the Rutgers network. If you are not connected to Rutgers network,
-you may log into iLab and then download the bomb.
-
-There are two ways to download the bomb. The first method is the easiest: You can obtain your bomb by
-pointing your Web browser at:
-http://prof2.cs.rutgers.edu:17200/
-
-This will display a binary bomb request form for you to fill in. Enter your user name and email address and
-hit the Submit button. The server will build your bomb and return it to your browser in a tar file called
-bomb<id>.tar, where <id> is the unique number of your bomb (i.e. bomb25.tar).
-  
-The other method is to use the terminal command curl to download the file. This method is quite volatile
-and sending a wrong request may shut the bomblab server down, so take caution. You want to use this
-command from the terminal: curl -JLO "http://prof2.cs.rutgers.edu:17200/?username=<N>&usermail=<E>&submit=Submit"
-with everything in a single line. <N> is your NetID and <E> should be your email address.
-Make sure that you have typed in all the punctuations correctly including the quotation marks around the
-url. This command will download the bomb<id>.tar to the current directory that your terminal is at.
-The extract the content using this command:
-$ tar -xvf bomb<id>.tar
-This will create a directory called ./bomb<ID> with the following files:
-• README: Identifies the bomb and its owners.
-• bomb: The executable binary bomb.
-• bomb.c: Source file with the bomb’s main routine and a friendly greeting from Dr. Evil.
-If for some reason you request multiple bombs, this is not a problem. Choose one bomb to work on and
-delete the rest.
-- Step 2: Defuse Your Bomb
-Your job for this lab is to defuse your bomb.
-  
-You must do the assignment on ilab.cs.rutgers.edu or on any other official Rutgers CS server
-machines. In fact, there is a rumor that Dr. Evil really is evil, and the bomb will always blow up if run
-elsewhere. There are several other tamper-proofing devices built into the bomb as well, or so we hear.
-
-You can use many tools to help you defuse your bomb. Please look at the hints section for some tips and
-ideas. The best way is to use your favorite debugger to step through the disassembled binary.
-
-The first two phases are worth 10 points each. Phases 3, 4, 5, and 6 are a little more difficult, so they are
-worth 20 points each, to a combined total of 100 points. The last three phases (phase 7, 8, and 9) are extra
-credit and worth 5 points each. If you complete all nine phases, your score will be 115/100.
-You can defuse the bomb by executing the bomb program,
-$ ./bomb
-and typing the correct string on stdin. You can also provide the correct string to the bomb by saving the
-string in a file and passing the file to a command line argument. For example,
-$ ./bomb solution.txt
-will read the input lines from solution.txt one line at a time until it reaches EOF (End of file), and
-then switch over to stdin. Each line in the file constitutes as an input string for each phase. In a moment
-of weakness, Dr. Evil added this feature so you don’t have to keep retyping the solutions to phases you have
-already defused.
-
-Each time your bomb explodes it notifies the bomblab server, and you lose 1/2 point in the final score
-for the lab. So there are consequences to exploding the bomb. You must be careful!
-
-To avoid accidentally detonating the bomb, you will need to learn how to single-step through the assembly
-code and how to set breakpoints. You will also need to learn how to inspect both the registers and the
-memory states. One of the nice side-effects of doing the lab is that you will get very good at using a
-debugger. This is a crucial skill that will pay big dividends the rest of your career.
-
-Although phases get progressively harder to defuse, the expertise you gain as you move from phase to phase
-should offset this difficulty. However, the last phases will challenge even the best students, so please don’t
-wait until the last minute to start.

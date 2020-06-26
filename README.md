@@ -1,6 +1,6 @@
 # pa1:
 This assignment was meant to introduce us to coding in C by doing a variety of assignments.
-# First: Array and Sorting
+# pa1/First: Array and Sorting
 - You have to write a program that will read an array from a file and sort the given array. You will
 return the array sorted with all odd numbers in ascending order at the front followed by all even
 numbers in descending order.
@@ -22,7 +22,7 @@ $./first file1.txt
 We will not give you improperly formatted files. You can assume all your input files will be in
 proper format as above.
 
-# Second: Hash table
+# pa1/Second: Hash table
   This assignment had us make hash tables that had 10000 buckets to start, no rehash implementation was required so in theory, elements could continuously map to the same entry in the hashtable:
 
 - A hash table can be implemented in many ways in C. You must find a simple way to implement
@@ -62,7 +62,7 @@ present
 duplicate
 absent
 
-# Third: Bit function
+# pa1/Third: Bit function
   In this exercise, you have to write a program that will read a number followed by a series of bit
 operations from a file and perform the given oeprations sequentially on the number. The operations
 are as follows:

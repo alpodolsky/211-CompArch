@@ -104,5 +104,5 @@ $./third file1.txt
 # bomb lab:
 a project meant to expose us to using GDB debugging, and looking at assembly to understand the function of a program in order to become familiar with translating assembly into C and vice versa.
 
-#pa3:
-Cache simulation
+# pa3:
+Cache simulation which can simulate different cache policies (like FIFO or LRU) as well as various block associativity.

@@ -1,5 +1,3 @@
-# Rutgers CS211 Computer Architecture 
-
 # pa1:
 This assignment was meant to introduce us to coding in C by doing a variety of assignments.
 # First: Array and Sorting
